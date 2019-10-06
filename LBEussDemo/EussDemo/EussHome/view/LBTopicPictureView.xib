@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LBTopicPictureView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="306"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="nfT-Pn-fqs">
+                    <rect key="frame" x="150" y="20" width="75" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="4i6-ls-jO2"/>
+                        <constraint firstAttribute="width" constant="75" id="Vca-gb-ONX"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PUA-PI-RoJ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="306"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="s2F-MO-F8C">
+                    <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="31" id="UGB-zB-Upm"/>
+                        <constraint firstAttribute="height" constant="31" id="mad-Ic-iw5"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXg-aq-GLm">
+                    <rect key="frame" x="0.0" y="263" width="375" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="hdx-2x-pBm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="   点击查看大图" image="see-big-picture" backgroundImage="see-big-picture-background"/>
+                    <connections>
+                        <action selector="clickBtnJump:" destination="iN0-l3-epB" eventType="touchUpInside" id="e9h-0r-B9F"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2m-Gc-PoP" customClass="LBProgressView">
+                    <rect key="frame" x="137.5" y="103" width="100" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="G6C-DP-Aff"/>
+                        <constraint firstAttribute="height" constant="100" id="UAi-yk-9Sq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="J2m-Gc-PoP" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4Pe-FN-B75"/>
+                <constraint firstItem="PUA-PI-RoJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="5Da-ss-Wmh"/>
+                <constraint firstItem="PUA-PI-RoJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Aet-S7-hzl"/>
+                <constraint firstItem="nfT-Pn-fqs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="JHt-oF-Oiy"/>
+                <constraint firstItem="s2F-MO-F8C" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="KwG-2t-fEK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rXg-aq-GLm" secondAttribute="trailing" id="RaV-gz-gYX"/>
+                <constraint firstItem="rXg-aq-GLm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="TVB-oL-GKE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PUA-PI-RoJ" secondAttribute="trailing" id="VkD-ea-9Z8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rXg-aq-GLm" secondAttribute="bottom" id="cr1-sT-84i"/>
+                <constraint firstItem="J2m-Gc-PoP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fV9-gh-Bsx"/>
+                <constraint firstItem="nfT-Pn-fqs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="j32-wy-Pu2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="PUA-PI-RoJ" secondAttribute="bottom" id="me9-b3-gHt"/>
+                <constraint firstItem="s2F-MO-F8C" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ynL-cI-EjP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="ClickBtn" destination="rXg-aq-GLm" id="2zu-l9-5VI"/>
+                <outlet property="gifImageView" destination="s2F-MO-F8C" id="Uqv-UZ-hQn"/>
+                <outlet property="imageView" destination="PUA-PI-RoJ" id="C6z-t7-anc"/>
+                <outlet property="progressView" destination="J2m-Gc-PoP" id="pED-rX-l9a"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="237.48125937031486"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="common-gif" width="31" height="31"/>
+        <image name="imageBackground" width="75" height="15"/>
+        <image name="see-big-picture" width="19" height="19"/>
+        <image name="see-big-picture-background" width="285" height="43"/>
+    </resources>
+</document>
